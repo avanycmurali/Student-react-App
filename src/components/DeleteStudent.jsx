@@ -1,8 +1,10 @@
 import React from 'react'
+import NavigationBar from './NavigationBar'
 
 const DeleteStudent = () => {
   return (
     <div>
+        <NavigationBar/>
 
 <div className="container">
     <div className="row">

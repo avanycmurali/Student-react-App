@@ -6,15 +6,22 @@ import './App.css'
 import AddStudent from './components/AddStudent'
 import StudentSearch from './components/StudentSearch'
 import DeleteStudent from './components/DeleteStudent'
+import ViewStudent from './components/ViewStudent'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <AddStudent/>
-      <StudentSearch/>
-      <DeleteStudent/>
+     <BrowserRouter>
+     <Routes>
+      <Route path='/'element={<AddStudent/>}/>
+      <Route path='/search'element={<StudentSearch/>}/>
+      <Route path='/delete'element={<DeleteStudent/>}/>
+      <Route path='/view'element={<ViewStudent/>}/>
+     </Routes>
+     </BrowserRouter>
     </>
   )
 }
